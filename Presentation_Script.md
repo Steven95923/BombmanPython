@@ -61,13 +61,12 @@ We also replayed the policy day by day against actual demand. It never ran out o
 ---
 
 ## 6. Question 3 – Day of the week (45 s)
-**Show:** monthly price trend chart, then the day-level weekday residual table
+**Show:** the Monday–Friday box plots of rate (section 4.1), then the monthly price trend chart
 
 **Say:**
-"At first glance prices look different by weekday, but that's misleading: every station pays the same supplier price on a given day, and that price moves with the market, doubling in spring 2019. Once we remove the time trend and the quantity discounts and treat each purchase day as one observation, most of the weekday difference disappears.
-One pattern survives: price increases cluster on Tuesdays, so Tuesday purchases are about 1.6 cents per litre dearer than other days. Avoiding Tuesday where the discount tier allows it is worth roughly 40,000 dollars a year. That's a useful tie-breaker, not a strategy, and it is on top of the discount savings, not instead of them."
+"For the day-of-the-week question we followed a simple test. We drew box plots of the purchase rate, cost divided by litres, for Monday to Friday, overall and for each fuel. If one day were really cheaper, its whole box would sit below the others. It doesn't: all five boxes cover the same range and the medians are within one cent of each other. So the data do not give us enough evidence that any weekday is cheaper. The small differences in the averages come from the market: every station pays the same price on a given day, and that price doubled in spring 2019, so a weekday looks dearer simply because of which weeks had orders on it. Tuesday's average is slightly higher because price increases tend to be posted on Tuesdays, but by the box-plot test that is 'sometimes', not 'most of the time'. Our conclusion: the cheaper-weekday idea is a rumour, and we attribute no savings to it."
 
-**中文说明：** 老师在这题最想看的是"你有没有被表面差异骗到"。先说差异是假的，再说剥掉干扰后还剩一个小规律，并且把它的分量压低。
+**中文说明：** 老师给的标准就是看箱线图：箱子整体更低才算证据，只是均值略低、范围重叠就是"证据不足，是谣言"。我们的五个箱子完全重叠，所以结论是"不能说哪天便宜"。周二略贵只作为附注。
 
 ---
 
@@ -87,7 +86,7 @@ No replacement pays back within five years. The two best cases are a diesel tank
 
 **Say:**
 "Main limitations: demand is inferred from gauges, not metered; there are data gaps; the invoice file is incomplete; and the brief assumes immediate delivery and fully usable tanks, which real operations won't match exactly.
-To summarise: adopt the reserve-based ordering policy for about 300,000 dollars a year, avoid Tuesday when the schedule allows, and don't replace tanks. Thank you."
+To summarise: adopt the reserve-based ordering policy for about 300,000 dollars a year, don't chase a cheaper weekday, and don't replace tanks. Thank you."
 
 ---
 
@@ -104,7 +103,7 @@ To summarise: adopt the reserve-based ordering policy for about 300,000 dollars 
 | Theoretical upper bound | CAD 1,163,068 |
 | Incremental | CAD 790,027 total ≈ CAD 302,000 / year |
 | Station 1 gasoline below reserve | 53 % of the time |
-| Tuesday premium | ≈ 1.6 c/L, ≈ CAD 40,000 / year if avoided |
+| Weekday test | Mon–Fri boxes overlap, medians 1.060–1.068 CAD/L: no preferred day (Tuesday mean ≈ +1.6 c/L, not actionable) |
 | Best tank replacement | Station 1 diesel / station 5 gasoline, ~CAD 19–21k/yr, payback 12–13 yrs |
 
 ## Likely questions and short answers
@@ -112,6 +111,6 @@ To summarise: adopt the reserve-based ordering policy for about 300,000 dollars 
 - **Why 7 days?** It is the rule given in the brief; we also show what a one-day delivery lead time would do to it.
 - **Why order the minimum for the tier instead of filling up?** Same discount per litre, less cash tied up; fill-up is shown as an alternative scenario.
 - **How did you handle the 44-day outage?** Those days are excluded from the averages; consumption is only averaged over "complete" days with at least 20 hours of readings.
-- **Is the Tuesday effect real?** It holds in 2017 and 2018 and survives several robustness checks, but it disappears in the volatile 2019 period, so we treat it as weak evidence.
+- **Isn't Tuesday more expensive?** Its average is about 1.6 cents higher because price increases tend to be posted on Tuesdays, but its box plot overlaps the other days completely and the pattern vanishes in 2019. By the box-plot rule that is "sometimes, not most of the time", so we don't base a recommendation on it.
 - **Why is station 5 gasoline getting no discount?** With the 7-day reserve its available storage is 14,232 L, 768 L short of the 15,000 L tier. Relaxing to 6.5 days would unlock 2 cents.
 - **What about fuel ageing at low-volume stations?** We flag it: three diesel sites would go 10–12 months between orders under the pure discount rule, and we recommend capping at ~90 days.
