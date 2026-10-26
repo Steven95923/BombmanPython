@@ -1,6 +1,16 @@
-# Presentation Script – Fuel_Inventory_Slides_v2 (22 slides)
+# Presentation Script – Fuel_Inventory_Slides_FINAL_V11 (22 slides)
 
-Matches notebook **Fuel_Inventory_Analysis_Final_v1** (regular and premium gasoline treated separately, 17 station–fuel groups). Main talk = slides 1–16, about 9–10 minutes. Slides 17–22 are appendix, only for questions.
+## Fix these in the deck before presenting
+
+1. **Slide 12, invoice counts line is broken.** It shows "Mon–Sun: 59 / 606 / 338 / 803 / 13 / 0" (six numbers, first one wrong). Correct: **522 / 549 / 606 / 338 / 803 / 13 / 0**.
+2. **Remove version-control text from slide bodies.** The title slide says "V11 Verified Final"; footnotes on slides 6, 8, 14, 17–21 say things like "match V11", "V11's two-decimal precision", "Independent display rounding can cause a CAD 0.01 difference". The audience does not know what V11 is; this reads as a generation artefact. Delete those phrases.
+3. **Round displayed numbers for the audience.** The deck now shows cents and hundredths of a liter everywhere (CAD 295,111.50; 14,709.55 L reserve; 8,134.32 L average order). Keep full precision in the notebook, but slides read better as 295,112 / 14,710 / 8,134. If the team wants to keep the decimals, that is defensible, but say the rounded number aloud.
+4. **Two presenters.** The notes on slide 8 end with "I'll hand over to my teammate". Presenter 1 = slides 1–8 (problem, data, policy logic); Presenter 2 = slides 9–16 (money, weekday, tanks, close). Both should be able to answer the appendix questions.
+
+Everything else in V11 matches notebook Final_v1: 205,979.41 → 978,928.99; +772,949.59; × 365/956 = 295,111.50; upper bound 1,163,067.92; Station 5 T25 payback 12.21 years; the only positive scenario is Station 1 T10 at CAD 150,000 and +20% demand = +66,950.
+
+
+Matches notebook **Fuel_Inventory_Analysis_Final_v1** (regular and premium gasoline treated separately, 17 station–fuel groups). Main talk = slides 1–16, about 9–10 minutes; Presenter 1 takes 1–8, Presenter 2 takes 9–16. Slides 17–22 are appendix, only for questions. Numbers below are rounded the way you should say them; the V11 slides show two decimals.
 
 Each slide: **Show** (what is on screen) · **Say** (English, read as is) · **中文说明**（这页的数怎么来的、可能被问什么）.
 
@@ -58,17 +68,17 @@ The paid price column is volume-weighted and reflects when each station happened
 
 **中文说明：** 14,710 = 7 × 2,101（4 号店柴油日均）。这页是老师最想看的"compare a few feasible scenarios"。注意 4 号店只比 25,000 门槛多 290 升，是边界情况，第 15 页会回到它。
 
-## Slide 8 – Specific recommendations (60 s)
+## Slide 8 – Specific recommendations (60 s) — Presenter 1 hands over after this slide
 **Show:** table of six representative groups
 
-**Say:** "Applying that logic to every group gives a specific trigger and order size for each. Station 1 regular has 120,000 liters across three tanks, so it can order 40,000 liters and earn four cents. Station 1 premium, with one 40,000-liter tank, reaches the 25,000-liter tier at three cents. Station 4 and most mid-sized stations land at 25,000 liters. Station 5 diesel reaches 15,000. And three groups cannot reach any discount: Station 5 regular has only 14,142 liters of room above its reserve, 858 short of the first threshold, and Station 7's two 5,000-liter tanks leave under 5,000 liters of space. All 17 groups have positive room above the reserve, so the seven-day rule is feasible everywhere."
+**Say:** "Applying that logic to every group gives a specific trigger and order size for each. Station 1 regular has 120,000 liters across three tanks, so it can order 40,000 liters and earn four cents. Station 1 premium, with one 40,000-liter tank, reaches the 25,000-liter tier at three cents. Station 4 and most mid-sized stations land at 25,000 liters. Station 5 diesel reaches 15,000. And three groups cannot reach any discount: Station 5 regular has only 14,142 liters of room above its reserve, 858 short of the first threshold, and Station 7's two 5,000-liter tanks leave under 5,000 liters of space. All 17 groups have positive room above the reserve, so the seven-day rule is feasible everywhere. I'll now hand over to my teammate for the financial results, the weekday question and the tank decision."
 
-**中文说明：** 完整 17 组在附录第 18、19 页。5 号店普通汽油差 858 升（B 的数，旧版是 768，因为 B 的日均略高）。7 号店两种油各 4,880 和 4,119 升可用，装满也不到 15,000。
+**中文说明：** 完整 17 组在附录第 18、19 页。交接句就是 V11 备注里那句，说完换人。5 号店普通汽油差 858 升（B 的数，旧版是 768，因为 B 的日均略高）。7 号店两种油各 4,880 和 4,119 升可用，装满也不到 15,000。
 
-## Slide 9 – More discounts on the same volume (60 s)
+## Slide 9 – More discounts on the same volume (60 s) — Presenter 2 starts
 **Show:** 205,979 → 978,929; +772,950; ≈295,112/yr; upper bound 1,163,068
 
-**Say:** "Now the financial comparison, on exactly the same 29 million liters the network actually bought. Historically the discounts came to CAD 205,979. Under our policy, with each group ordering its recommended quantity, they come to CAD 978,929. That is CAD 772,950 more over the 956 days, or about CAD 295,000 a year.
+**Say:** "Thank you. Now the financial comparison, on exactly the same 29 million liters the network actually bought. Historically the discounts came to CAD 205,979. Under our policy, with each group ordering its recommended quantity, they come to CAD 978,929. That is CAD 772,950 more over the 956 days, or about CAD 295,000 a year.
 For reference, the unconstrained ceiling, four cents on every liter, would be CAD 1.16 million. Capacity and reserve constraints keep the feasible result below that, and that gap is exactly the storage-limited groups on the previous slide."
 
 **中文说明：**
